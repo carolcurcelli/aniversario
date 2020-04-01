@@ -1,0 +1,351 @@
+*, *:after, *:before {
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0;
+}
+body {
+	display: flex;
+	align-content: center;
+	align-items:center;
+	justify-content: center;
+	height:100vh;
+	flex-direction: column;
+	font-family: 'Libre Baskerville', serif;
+	background-image:linear-gradient(#0cebeb 0%, #0082c8 100%);
+	/*cursor:url('imgs/cursor.png'), auto;*/
+}
+.windows-page {
+	width:99%;
+	height:99%;
+	background-color:#ffffff;
+	margin:auto;
+	display:flex;
+	align-content: center;
+	align-items:center;
+	justify-content: center;
+	border-top: solid 1px #c0c0c0;
+	border-left: solid 1px #c0c0c0;
+	border-bottom: solid 1px #000000;
+	border-right: solid 1px #000000;
+	position:relative;
+}
+.windows-page__content {
+	background-color:#c0c0c0;
+	width:100vw;
+	height:100vh;
+}
+.windows-page__content__title-area {
+	width:100%;
+	height:20px;
+	background:#010081;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:0 5px;
+}
+.windows-page__content__title {
+	color:#ffffff;
+	font-size:12px;
+	font-weight:bold;
+	display:flex;
+	align-items: center;
+}
+.windows-page__content__title .netscape {
+	height:14px;
+	width:14px;
+	margin-right:5px;
+}
+
+.windows-page__content__button {
+	height:14px;
+	width:14px;
+	position:relative;
+	border-bottom: solid 1px #808080;
+	border-right: solid 1px #808080;
+	border-top: solid 1px #ffffff;
+	border-left: solid 1px #ffffff;
+}
+.button--minimize:before {
+	content:'';
+	display:block;
+	width:11px;
+	height:2px;
+	background-color:#000000;
+	margin-top:8px;
+}
+.button--maximize:before {
+	content:'';
+	display:block;
+	width:10px;
+	height:10px;
+	background-color:transparent;
+	border:solid 2px #000000;	
+	margin-left:1px;
+}
+.button--close:before {
+	content:'';
+	display:block;
+	width:2px;
+	height:10px;
+	background-color:#000000;
+	transform: rotate(45deg);
+	margin-left:5px;
+}
+.button--close:after {
+	content:'';
+	display:block;
+	width:2px;
+	height:10px;
+	background-color:#000000;
+	transform: rotate(-45deg);
+	position:absolute;
+	top:1px;
+	margin-left:5px;
+}
+.windows-page__options {
+	font-size:10px;
+	margin:5px 5px 0;
+	word-spacing: 10px;
+}
+.windows-page__actual-page {
+	background-image:url('imgs/stars.gif');
+	background-color:#000000;
+	height:90%;
+	text-align:center;
+	padding:20px;
+	color:#ffffff;
+	overflow: auto;
+}
+.windows-page__subtitle {
+	font-size:16px;
+}
+.windows-page__paragraph {
+	font-size:12px;
+	max-width:600px;
+	margin:5px auto 20px;
+}
+.windows-page__paragraph.small {
+    font-size:10px;
+    font-weight:bold;
+    -webkit-animation: rainbow 5s infinite; 
+    -ms-animation: rainbow 5s infinite;
+    animation: rainbow 5s infinite; 
+}
+
+@-webkit-keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+@-ms-keyframes rainbow{
+   0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+@keyframes rainbow{
+    0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
+
+.feliz-aniversario {
+	max-width: 100%;
+}
+.windows-page__image {
+	width:200px;
+}
+.windows-page__image.wilson {
+	width:500px;
+	max-width:100%;
+}
+.windows-page__gif {
+	max-width:100%;
+}
+.windows-page__gif.sonic {
+	max-width:55%;
+}
+.windows-page__gif.deathnote {
+	max-width:46%;
+}
+.windows-page__gif.naruto {
+	max-width:70%;
+}
+.windows-page__image-text {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	max-width:500px;
+	margin:0 auto 40px;
+}
+.windows-page__image-text.sapo {
+	display:block;
+}
+.windows-page__stats {
+	text-align:center;
+	display:inline-block;
+}
+.windows-page__image-text .windows-page__stats .windows-page__paragraph {
+	text-align:center;
+}
+.windows-page__image-text .windows-page__paragraph {
+	text-align:left;
+	margin: 10px;
+	width:315px;
+}
+audio {
+	margin:10px 0;
+}
+.pagecounter {
+	margin-top:10px;
+}
+.metalgreymon {
+	position:absolute;
+	left:-150px;
+	bottom:0;
+	display:none;
+}
+.agumon {
+	position:absolute;
+	height:100px;
+	top:120px;
+	right:-100px;
+	display:none;
+}
+.trash {
+	position: absolute;
+	top:10px;
+	left:10px;
+	display:none;
+	text-align:center;
+	cursor:pointer;
+}
+.trash-icon {
+	height:40px;
+}
+.trash-text {
+	display:block;
+	font-size:12px;
+}
+.windows-bar {
+	background:#c0c0c0;
+	width:100%;
+	align-self: flex-end;
+	border-top: solid 1px #dfdfdf;
+	border-bottom: solid 1px #808080;
+	min-height:30px;
+	align-items: center;
+	justify-content: space-between;
+	padding:0 10px;
+	display:none;
+}
+.windows-button {
+	border-bottom: solid 1px #808080;
+	border-right: solid 1px #808080;
+	border-top: solid 1px #ffffff;
+	border-left: solid 1px #ffffff;
+	background:transparent;
+	padding: 2px 5px;
+	font-weight:bold;
+	display:flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+.windows-logo,
+.computer-logo {
+	height:14px;
+	width:14px;
+	margin-right:2px;
+}
+.windows-time {
+	border-top: solid 1px #808080;
+	border-left: solid 1px #808080;
+	border-right: solid 1px #ffffff;
+	border-bottom: solid 1px #ffffff;
+	padding:0 2px;
+	font-size:12px;
+	display:flex;
+	align-items: flex-end;
+	justify-content: left;
+	width:75px;
+}
+
+@media (min-width:535px) {
+	.windows-page__image-text.sapo {
+		display:flex;
+	}
+	.windows-page__stats,
+	.windows-page__image-text .windows-page__stats .windows-page__paragraph {
+		text-align:left;
+	}
+}
+
+@media (min-width: 550px) {
+	.windows-page__gif {
+	    max-width: 460px;
+	}
+	.windows-page__image-text.sapo {
+		display:flex;
+	}
+}
+
+@media (min-width: 644px) {
+	.windows-page__gif.sonic {
+		max-width: 460px;
+	}
+}
+
+@media (min-width: 950px) {
+	.windows-page {
+		width:800px;
+		height:600px;
+	}
+	.windows-page__content {
+		background-color:#c0c0c0;
+		width:796px;
+		height:596px;
+	}
+}
+
+@media (min-width: 1000px) {
+	.windows-bar {
+		display:flex;
+	}
+	.metalgreymon {
+		display:block;
+	}
+	.trash {
+		display:block;
+	}
+	.trash:after {
+		display: inline-block;
+	}
+	.agumon {
+		display:block;
+	}
+}
