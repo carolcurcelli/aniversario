@@ -87,35 +87,9 @@
 				<div class="windows-page__image-text sapo">
 					<img class="windows-page__image" src="imgs/dados.jpg">
 					<div class="windows-page__stats">
-						<script type = "text/javascript" >
-							var today = new Date;
-							var meeting = new Date("3/4/2019");
-							var seeing = new Date("3/17/2019");
-							var dating = new Date("4/3/2019");
-
-							var meetingTimeDiff = Math.abs(today.getTime() - meeting.getTime());
-							var meetingFullDays = Math.floor(meetingTimeDiff / (1000 * 3600 * 24)); 
-							var meetingYears = Math.floor(meetingFullDays / 365);
-							var meetingMonths = Math.floor((meetingFullDays % 365) / 30.5);
-							var meetingDays = Math.ceil(meetingFullDays % 30.5)
-
-							var seeingTimeDiff = Math.abs(today.getTime() - seeing.getTime());
-							var seeingFullDays = Math.floor(seeingTimeDiff / (1000 * 3600 * 24)); 
-							var seeingYears = Math.floor(seeingFullDays / 365);
-							var seeingMonths = Math.floor((seeingFullDays % 365) / 30.5);
-							var seeingDays = Math.ceil(seeingFullDays % 30.5)
-
-							var datingTimeDiff = Math.abs(today.getTime() - dating.getTime());
-							var datingFullDays = Math.floor(datingTimeDiff / (1000 * 3600 * 24)); 
-							var datingYears = Math.floor(datingFullDays / 365);
-							var datingMonths = Math.floor((datingFullDays % 365) / 30.5);
-							var datingDays = Math.ceil(datingFullDays % 30.5)
-							document.write(
-								`<p class="windows-page__paragraph">No conhecemos há ` + meetingYears + ` ano(s), ` + meetingMonths + ` mes(es) e ` + meetingDays + ` dia(s)</p>
-								<p class="windows-page__paragraph">Estamos saindo há ` + seeingYears + ` ano(s), ` + seeingMonths + ` mes(es) e ` + seeingDays + ` dia(s)</p>
-								<p class="windows-page__paragraph">Somos namorados há ` + datingYears + ` ano(s), ` + datingMonths + ` mes(es) e ` + datingDays + ` dia(s)</p>`
-							); 
-						</script> 
+						<p class="windows-page__paragraph" id="meeting">Nos conhecemos há </p>
+						<p class="windows-page__paragraph" id="seeing">Estamos saindo há </p>
+						<p class="windows-page__paragraph" id="dating">Somos namorados há </p>
 					</div>
 				</div>
 				<p class="windows-page__paragraph">
@@ -147,28 +121,6 @@
 			<span id="time"></span>
 		</div>
 	</div>
-	<script type="text/javascript">
-		function checkTime(i) {
-		  if (i < 10) {
-		    i = "0" + i;
-		  }
-		  return i;
-		}
-
-		function startTime() {
-		  var today = new Date();
-		  var h = today.getHours();
-		  var m = today.getMinutes();
-		  var s = today.getSeconds();
-		  // add a zero in front of numbers<10
-		  m = checkTime(m);
-		  s = checkTime(s);
-		  document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-		  t = setTimeout(function() {
-		    startTime()
-		  }, 500);
-		}
-		startTime();
-	</script>
+	<script src="dates.js"></script>
 </body>
 </html>
