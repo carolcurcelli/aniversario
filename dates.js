@@ -1,7 +1,6 @@
 (function(){
     new cursoreffects.ghostCursor();
 
-
     const today = new Date();
     const aniversarioMarco = new Date("04/15/1996");
     const aniversarioCarol = new Date("07/13/1993");
