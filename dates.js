@@ -8,11 +8,13 @@
     const seeing = new Date("03/17/2019");
     const dating = new Date("04/03/2019");
     const living = new Date("04/03/2021");
+    const marriage = new Date("09/09/2023");
 
     const meetingPhrase = document.getElementById('meeting');
     const seeingPhrase = document.getElementById('seeing');
     const datingPhrase = document.getElementById('dating');
     const livingPhrase = document.getElementById('living');
+    const marriagePhrase = document.getElementById('marriage');
 
     const idadeMarco = document.getElementById('idadeMarco');
     const idadeCarol = document.getElementById('idadeCarol');
@@ -46,6 +48,7 @@
     seeingPhrase.innerHTML += dateCreator(seeing);
     datingPhrase.innerHTML += dateCreator(dating);
     livingPhrase.innerHTML += dateCreator(living);
+    marriagePhrase.innerHTML += dateCreator(marriage);
 
 })();
 
